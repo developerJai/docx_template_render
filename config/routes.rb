@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  get 'documents/new'
+  resources :documents do 
+    member do
+      get :doc_preview
+    end
+  end
+  root to: 'documents#index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")

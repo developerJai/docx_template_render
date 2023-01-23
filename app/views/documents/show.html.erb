@@ -1,0 +1,12 @@
+<p style="color: green"><%= notice %></p>
+https://view.officeapps.live.com/op/embed.aspx?src=<%=document_url(@document, format: "docx", embedded: true)%>
+<%= render @document %>
+<iframe src="https://view.officeapps.live.com/op/embed.aspx?src=<%=document_url(@document, format: "docx", embedded: true)%>"></iframe>
+
+
+<div>
+  <%= link_to "Edit this document", edit_document_path(@document) %> |
+  <%= link_to "Back to documents", documents_path %>
+
+  <%= button_to "Destroy this document", @document, method: :delete %>
+</div>

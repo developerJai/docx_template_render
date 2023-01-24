@@ -1,0 +1,9 @@
+<div id="<%= dom_id document %>">
+  <% if document.doc.attached? %>
+    <%= document.id %> <%= link_to 'File', url_for(document.doc) %>
+    <%= link_to "Preview", doc_preview_document_path(document.id) %>
+    
+  <% else %>
+    No File attached
+  <% end %>
+</div>
